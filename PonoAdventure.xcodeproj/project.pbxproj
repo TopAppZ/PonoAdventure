@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		338DE71E1D95393200CEC5C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE71D1D95393200CEC5C0 /* AppDelegate.swift */; };
+		338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE71F1D95393200CEC5C0 /* ViewController.swift */; };
+		338DE7231D95393200CEC5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338DE7211D95393200CEC5C0 /* Main.storyboard */; };
+		338DE7261D95393200CEC5C0 /* PonoAdventure.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */; };
+		338DE7281D95393200CEC5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338DE7271D95393200CEC5C0 /* Assets.xcassets */; };
+		338DE72B1D95393200CEC5C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */; };
+		338DE7361D95393200CEC5C0 /* PonoAdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7351D95393200CEC5C0 /* PonoAdventureTests.swift */; };
+		338DE7411D95393200CEC5C0 /* PonoAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		338DE7321D95393200CEC5C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338DE7121D95393200CEC5C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338DE7191D95393200CEC5C0;
+			remoteInfo = PonoAdventure;
+		};
+		338DE73D1D95393200CEC5C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338DE7121D95393200CEC5C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338DE7191D95393200CEC5C0;
+			remoteInfo = PonoAdventure;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		338DE71A1D95393200CEC5C0 /* PonoAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PonoAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		338DE71D1D95393200CEC5C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		338DE71F1D95393200CEC5C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		338DE7221D95393200CEC5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		338DE7251D95393200CEC5C0 /* PonoAdventure.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PonoAdventure.xcdatamodel; sourceTree = "<group>"; };
+		338DE7271D95393200CEC5C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338DE72A1D95393200CEC5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		338DE72C1D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338DE7311D95393200CEC5C0 /* PonoAdventureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PonoAdventureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		338DE7351D95393200CEC5C0 /* PonoAdventureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonoAdventureTests.swift; sourceTree = "<group>"; };
+		338DE7371D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338DE73C1D95393200CEC5C0 /* PonoAdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PonoAdventureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonoAdventureUITests.swift; sourceTree = "<group>"; };
+		338DE7421D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338DE7171D95393200CEC5C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE72E1D95393200CEC5C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE7391D95393200CEC5C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		338DE7111D95393200CEC5C0 = {
+			isa = PBXGroup;
+			children = (
+				338DE71C1D95393200CEC5C0 /* PonoAdventure */,
+				338DE7341D95393200CEC5C0 /* PonoAdventureTests */,
+				338DE73F1D95393200CEC5C0 /* PonoAdventureUITests */,
+				338DE71B1D95393200CEC5C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		338DE71B1D95393200CEC5C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338DE71A1D95393200CEC5C0 /* PonoAdventure.app */,
+				338DE7311D95393200CEC5C0 /* PonoAdventureTests.xctest */,
+				338DE73C1D95393200CEC5C0 /* PonoAdventureUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338DE71C1D95393200CEC5C0 /* PonoAdventure */ = {
+			isa = PBXGroup;
+			children = (
+				338DE71D1D95393200CEC5C0 /* AppDelegate.swift */,
+				338DE71F1D95393200CEC5C0 /* ViewController.swift */,
+				338DE7211D95393200CEC5C0 /* Main.storyboard */,
+				338DE7271D95393200CEC5C0 /* Assets.xcassets */,
+				338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */,
+				338DE72C1D95393200CEC5C0 /* Info.plist */,
+				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
+			);
+			path = PonoAdventure;
+			sourceTree = "<group>";
+		};
+		338DE7341D95393200CEC5C0 /* PonoAdventureTests */ = {
+			isa = PBXGroup;
+			children = (
+				338DE7351D95393200CEC5C0 /* PonoAdventureTests.swift */,
+				338DE7371D95393200CEC5C0 /* Info.plist */,
+			);
+			path = PonoAdventureTests;
+			sourceTree = "<group>";
+		};
+		338DE73F1D95393200CEC5C0 /* PonoAdventureUITests */ = {
+			isa = PBXGroup;
+			children = (
+				338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */,
+				338DE7421D95393200CEC5C0 /* Info.plist */,
+			);
+			path = PonoAdventureUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		338DE7191D95393200CEC5C0 /* PonoAdventure */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338DE7451D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventure" */;
+			buildPhases = (
+				338DE7161D95393200CEC5C0 /* Sources */,
+				338DE7171D95393200CEC5C0 /* Frameworks */,
+				338DE7181D95393200CEC5C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PonoAdventure;
+			productName = PonoAdventure;
+			productReference = 338DE71A1D95393200CEC5C0 /* PonoAdventure.app */;
+			productType = "com.apple.product-type.application";
+		};
+		338DE7301D95393200CEC5C0 /* PonoAdventureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338DE7481D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureTests" */;
+			buildPhases = (
+				338DE72D1D95393200CEC5C0 /* Sources */,
+				338DE72E1D95393200CEC5C0 /* Frameworks */,
+				338DE72F1D95393200CEC5C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338DE7331D95393200CEC5C0 /* PBXTargetDependency */,
+			);
+			name = PonoAdventureTests;
+			productName = PonoAdventureTests;
+			productReference = 338DE7311D95393200CEC5C0 /* PonoAdventureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		338DE73B1D95393200CEC5C0 /* PonoAdventureUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338DE74B1D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureUITests" */;
+			buildPhases = (
+				338DE7381D95393200CEC5C0 /* Sources */,
+				338DE7391D95393200CEC5C0 /* Frameworks */,
+				338DE73A1D95393200CEC5C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				338DE73E1D95393200CEC5C0 /* PBXTargetDependency */,
+			);
+			name = PonoAdventureUITests;
+			productName = PonoAdventureUITests;
+			productReference = 338DE73C1D95393200CEC5C0 /* PonoAdventureUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338DE7121D95393200CEC5C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Agileinf;
+				TargetAttributes = {
+					338DE7191D95393200CEC5C0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					338DE7301D95393200CEC5C0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 338DE7191D95393200CEC5C0;
+					};
+					338DE73B1D95393200CEC5C0 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 338DE7191D95393200CEC5C0;
+					};
+				};
+			};
+			buildConfigurationList = 338DE7151D95393200CEC5C0 /* Build configuration list for PBXProject "PonoAdventure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 338DE7111D95393200CEC5C0;
+			productRefGroup = 338DE71B1D95393200CEC5C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				338DE7191D95393200CEC5C0 /* PonoAdventure */,
+				338DE7301D95393200CEC5C0 /* PonoAdventureTests */,
+				338DE73B1D95393200CEC5C0 /* PonoAdventureUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		338DE7181D95393200CEC5C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DE72B1D95393200CEC5C0 /* LaunchScreen.storyboard in Resources */,
+				338DE7281D95393200CEC5C0 /* Assets.xcassets in Resources */,
+				338DE7231D95393200CEC5C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE72F1D95393200CEC5C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE73A1D95393200CEC5C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338DE7161D95393200CEC5C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */,
+				338DE71E1D95393200CEC5C0 /* AppDelegate.swift in Sources */,
+				338DE7261D95393200CEC5C0 /* PonoAdventure.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE72D1D95393200CEC5C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DE7361D95393200CEC5C0 /* PonoAdventureTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		338DE7381D95393200CEC5C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338DE7411D95393200CEC5C0 /* PonoAdventureUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		338DE7331D95393200CEC5C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338DE7191D95393200CEC5C0 /* PonoAdventure */;
+			targetProxy = 338DE7321D95393200CEC5C0 /* PBXContainerItemProxy */;
+		};
+		338DE73E1D95393200CEC5C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338DE7191D95393200CEC5C0 /* PonoAdventure */;
+			targetProxy = 338DE73D1D95393200CEC5C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		338DE7211D95393200CEC5C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338DE7221D95393200CEC5C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338DE72A1D95393200CEC5C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		338DE7431D95393200CEC5C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		338DE7441D95393200CEC5C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338DE7461D95393200CEC5C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PonoAdventure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		338DE7471D95393200CEC5C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PonoAdventure/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventure;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		338DE7491D95393200CEC5C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PonoAdventureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PonoAdventure.app/PonoAdventure";
+			};
+			name = Debug;
+		};
+		338DE74A1D95393200CEC5C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PonoAdventureTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PonoAdventure.app/PonoAdventure";
+			};
+			name = Release;
+		};
+		338DE74C1D95393200CEC5C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PonoAdventureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PonoAdventure;
+			};
+			name = Debug;
+		};
+		338DE74D1D95393200CEC5C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PonoAdventureUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventureUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PonoAdventure;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338DE7151D95393200CEC5C0 /* Build configuration list for PBXProject "PonoAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338DE7431D95393200CEC5C0 /* Debug */,
+				338DE7441D95393200CEC5C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338DE7451D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338DE7461D95393200CEC5C0 /* Debug */,
+				338DE7471D95393200CEC5C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		338DE7481D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338DE7491D95393200CEC5C0 /* Debug */,
+				338DE74A1D95393200CEC5C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		338DE74B1D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338DE74C1D95393200CEC5C0 /* Debug */,
+				338DE74D1D95393200CEC5C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				338DE7251D95393200CEC5C0 /* PonoAdventure.xcdatamodel */,
+			);
+			currentVersion = 338DE7251D95393200CEC5C0 /* PonoAdventure.xcdatamodel */;
+			path = PonoAdventure.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 338DE7121D95393200CEC5C0 /* Project object */;
+}
