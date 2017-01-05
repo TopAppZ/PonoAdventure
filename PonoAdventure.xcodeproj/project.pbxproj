@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332543181DDF81B20009BDE9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332543171DDF81B20009BDE9 /* Category.swift */; };
+		3325431D1DDF91A90009BDE9 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325431C1DDF91A90009BDE9 /* WebInterface.swift */; };
+		3325431F1DDF91EC0009BDE9 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325431E1DDF91EC0009BDE9 /* Web.swift */; };
+		33525F521DBA6A0F00674133 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F511DBA6A0F00674133 /* RoundedButton.swift */; };
+		33525F541DBA735500674133 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F531DBA735500674133 /* ListViewController.swift */; };
+		33525F561DBA7AE300674133 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */; };
+		33525F581DBA984E00674133 /* Booking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33525F571DBA984E00674133 /* Booking.storyboard */; };
+		3358BE721DBA41EA00A02AA1 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3358BE711DBA41EA00A02AA1 /* Login.storyboard */; };
+		3358BE741DBA477F00A02AA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE731DBA477F00A02AA1 /* LoginViewController.swift */; };
+		3358BE761DBA4BA800A02AA1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */; };
+		3358BE781DBA4DF800A02AA1 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE771DBA4DF800A02AA1 /* RoundedView.swift */; };
+		335AA6621DF7153700F72AE7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA6611DF7153700F72AE7 /* Place.swift */; };
+		3369CC341DB6BBD40029C1D1 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */; };
+		3369CC361DB6CC030029C1D1 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */; };
 		338DE71E1D95393200CEC5C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE71D1D95393200CEC5C0 /* AppDelegate.swift */; };
 		338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE71F1D95393200CEC5C0 /* ViewController.swift */; };
 		338DE7231D95393200CEC5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338DE7211D95393200CEC5C0 /* Main.storyboard */; };
@@ -15,6 +29,12 @@
 		338DE72B1D95393200CEC5C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */; };
 		338DE7361D95393200CEC5C0 /* PonoAdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7351D95393200CEC5C0 /* PonoAdventureTests.swift */; };
 		338DE7411D95393200CEC5C0 /* PonoAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */; };
+		3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3395447E1DF879750079DEA6 /* CoreLocation.framework */; };
+		33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F5830C1E1EF60800DB27B7 /* MapKit.framework */; };
+		33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */; };
+		49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */; };
+		8E4900B8A21D1810668B8168 /* Pods_PonoAdventureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6083237B978F9B8B0ED6DC /* Pods_PonoAdventureTests.framework */; };
+		EDDFD9492BBB0610F105369C /* Pods_PonoAdventureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 462A1B59E116CA5B66B6A30A /* Pods_PonoAdventureUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +55,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332543171DDF81B20009BDE9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3325431C1DDF91A90009BDE9 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
+		3325431E1DDF91EC0009BDE9 /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
+		33525F511DBA6A0F00674133 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		33525F531DBA735500674133 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		33525F571DBA984E00674133 /* Booking.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Booking.storyboard; sourceTree = "<group>"; };
+		3358BE711DBA41EA00A02AA1 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		3358BE731DBA477F00A02AA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		3358BE771DBA4DF800A02AA1 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		335AA6611DF7153700F72AE7 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		338DE71A1D95393200CEC5C0 /* PonoAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PonoAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		338DE71D1D95393200CEC5C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338DE71F1D95393200CEC5C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +83,18 @@
 		338DE73C1D95393200CEC5C0 /* PonoAdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PonoAdventureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonoAdventureUITests.swift; sourceTree = "<group>"; };
 		338DE7421D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3395447E1DF879750079DEA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		33F5830C1E1EF60800DB27B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests.release.xcconfig"; sourceTree = "<group>"; };
+		462A1B59E116CA5B66B6A30A /* Pods_PonoAdventureUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonoAdventureUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EB1B58902F299CD5C57426D /* Pods-PonoAdventure.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventure.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventure/Pods-PonoAdventure.release.xcconfig"; sourceTree = "<group>"; };
+		63A0E097505A4F89C8F3E017 /* Pods-PonoAdventureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureUITests/Pods-PonoAdventureUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonoAdventure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		985C63B0EAAC42310E3E5E76 /* Pods-PonoAdventureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACBEF132709D64C30CCF2F50 /* Pods-PonoAdventureUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureUITests/Pods-PonoAdventureUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C349916F470E19AD36559DA1 /* Pods-PonoAdventure.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventure.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventure/Pods-PonoAdventure.debug.xcconfig"; sourceTree = "<group>"; };
+		FE6083237B978F9B8B0ED6DC /* Pods_PonoAdventureTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PonoAdventureTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +102,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */,
+				3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */,
+				49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E4900B8A21D1810668B8168 /* Pods_PonoAdventureTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +120,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDDFD9492BBB0610F105369C /* Pods_PonoAdventureUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		332543161DDF81780009BDE9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				332543171DDF81B20009BDE9 /* Category.swift */,
+				335AA6611DF7153700F72AE7 /* Place.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		332543191DDF8D6B0009BDE9 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				3325431C1DDF91A90009BDE9 /* WebInterface.swift */,
+				3325431E1DDF91EC0009BDE9 /* Web.swift */,
+				33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
 		338DE7111D95393200CEC5C0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +153,8 @@
 				338DE7341D95393200CEC5C0 /* PonoAdventureTests */,
 				338DE73F1D95393200CEC5C0 /* PonoAdventureUITests */,
 				338DE71B1D95393200CEC5C0 /* Products */,
+				AD3D4A28757D09EF0DF9EE48 /* Pods */,
+				C7CAF4953AB9A638C528A841 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +171,8 @@
 		338DE71C1D95393200CEC5C0 /* PonoAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				332543191DDF8D6B0009BDE9 /* lib */,
+				332543161DDF81780009BDE9 /* Models */,
 				338DE71D1D95393200CEC5C0 /* AppDelegate.swift */,
 				338DE71F1D95393200CEC5C0 /* ViewController.swift */,
 				338DE7211D95393200CEC5C0 /* Main.storyboard */,
@@ -106,6 +180,16 @@
 				338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */,
 				338DE72C1D95393200CEC5C0 /* Info.plist */,
 				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
+				3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */,
+				3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */,
+				3358BE711DBA41EA00A02AA1 /* Login.storyboard */,
+				3358BE731DBA477F00A02AA1 /* LoginViewController.swift */,
+				3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */,
+				3358BE771DBA4DF800A02AA1 /* RoundedView.swift */,
+				33525F511DBA6A0F00674133 /* RoundedButton.swift */,
+				33525F531DBA735500674133 /* ListViewController.swift */,
+				33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */,
+				33525F571DBA984E00674133 /* Booking.storyboard */,
 			);
 			path = PonoAdventure;
 			sourceTree = "<group>";
@@ -128,6 +212,31 @@
 			path = PonoAdventureUITests;
 			sourceTree = "<group>";
 		};
+		AD3D4A28757D09EF0DF9EE48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C349916F470E19AD36559DA1 /* Pods-PonoAdventure.debug.xcconfig */,
+				4EB1B58902F299CD5C57426D /* Pods-PonoAdventure.release.xcconfig */,
+				985C63B0EAAC42310E3E5E76 /* Pods-PonoAdventureTests.debug.xcconfig */,
+				3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */,
+				63A0E097505A4F89C8F3E017 /* Pods-PonoAdventureUITests.debug.xcconfig */,
+				ACBEF132709D64C30CCF2F50 /* Pods-PonoAdventureUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7CAF4953AB9A638C528A841 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33F5830C1E1EF60800DB27B7 /* MapKit.framework */,
+				3395447E1DF879750079DEA6 /* CoreLocation.framework */,
+				766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */,
+				FE6083237B978F9B8B0ED6DC /* Pods_PonoAdventureTests.framework */,
+				462A1B59E116CA5B66B6A30A /* Pods_PonoAdventureUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +244,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 338DE7451D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventure" */;
 			buildPhases = (
+				B92A7DEEF85755A0B9269558 /* [CP] Check Pods Manifest.lock */,
 				338DE7161D95393200CEC5C0 /* Sources */,
 				338DE7171D95393200CEC5C0 /* Frameworks */,
 				338DE7181D95393200CEC5C0 /* Resources */,
+				7CA5515FF8468E8ACD6BFEBF /* [CP] Embed Pods Frameworks */,
+				24B1A449A7FB432ACA935A58 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +264,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 338DE7481D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureTests" */;
 			buildPhases = (
+				92A3362555A1AB1135C54270 /* [CP] Check Pods Manifest.lock */,
 				338DE72D1D95393200CEC5C0 /* Sources */,
 				338DE72E1D95393200CEC5C0 /* Frameworks */,
 				338DE72F1D95393200CEC5C0 /* Resources */,
+				A076F43B3F1513AF33424F41 /* [CP] Embed Pods Frameworks */,
+				5DB1844EFDAC8330FD83DF20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +285,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 338DE74B1D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureUITests" */;
 			buildPhases = (
+				32401A8A9CF109BD9CBD0CBE /* [CP] Check Pods Manifest.lock */,
 				338DE7381D95393200CEC5C0 /* Sources */,
 				338DE7391D95393200CEC5C0 /* Frameworks */,
 				338DE73A1D95393200CEC5C0 /* Resources */,
+				B52470C17F93D187BCBBAC47 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,15 +313,19 @@
 				TargetAttributes = {
 					338DE7191D95393200CEC5C0 = {
 						CreatedOnToolsVersion = 8.0;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = T329N89WGK;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Manual;
 					};
 					338DE7301D95393200CEC5C0 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 338DE7191D95393200CEC5C0;
 					};
 					338DE73B1D95393200CEC5C0 = {
 						CreatedOnToolsVersion = 8.0;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 338DE7191D95393200CEC5C0;
 					};
@@ -235,6 +356,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358BE721DBA41EA00A02AA1 /* Login.storyboard in Resources */,
+				33525F581DBA984E00674133 /* Booking.storyboard in Resources */,
 				338DE72B1D95393200CEC5C0 /* LaunchScreen.storyboard in Resources */,
 				338DE7281D95393200CEC5C0 /* Assets.xcassets in Resources */,
 				338DE7231D95393200CEC5C0 /* Main.storyboard in Resources */,
@@ -257,14 +380,150 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24B1A449A7FB432ACA935A58 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonoAdventure/Pods-PonoAdventure-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32401A8A9CF109BD9CBD0CBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5DB1844EFDAC8330FD83DF20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA5515FF8468E8ACD6BFEBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonoAdventure/Pods-PonoAdventure-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A3362555A1AB1135C54270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A076F43B3F1513AF33424F41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B52470C17F93D187BCBBAC47 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PonoAdventureUITests/Pods-PonoAdventureUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B92A7DEEF85755A0B9269558 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		338DE7161D95393200CEC5C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3358BE781DBA4DF800A02AA1 /* RoundedView.swift in Sources */,
+				3358BE761DBA4BA800A02AA1 /* CustomTextField.swift in Sources */,
+				3358BE741DBA477F00A02AA1 /* LoginViewController.swift in Sources */,
 				338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */,
+				33525F521DBA6A0F00674133 /* RoundedButton.swift in Sources */,
+				33525F561DBA7AE300674133 /* PlaceTableViewCell.swift in Sources */,
+				3325431F1DDF91EC0009BDE9 /* Web.swift in Sources */,
+				33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */,
+				3369CC361DB6CC030029C1D1 /* PlaceDetailsViewController.swift in Sources */,
 				338DE71E1D95393200CEC5C0 /* AppDelegate.swift in Sources */,
+				335AA6621DF7153700F72AE7 /* Place.swift in Sources */,
+				3325431D1DDF91A90009BDE9 /* WebInterface.swift in Sources */,
 				338DE7261D95393200CEC5C0 /* PonoAdventure.xcdatamodeld in Sources */,
+				33525F541DBA735500674133 /* ListViewController.swift in Sources */,
+				3369CC341DB6BBD40029C1D1 /* CategoryTableViewCell.swift in Sources */,
+				332543181DDF81B20009BDE9 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,30 +673,44 @@
 		};
 		338DE7461D95393200CEC5C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C349916F470E19AD36559DA1 /* Pods-PonoAdventure.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = T329N89WGK;
 				INFOPLIST_FILE = PonoAdventure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.ponoadventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fb5253a8-1f28-4c6d-9c77-c6c0f3d67ac4";
+				PROVISIONING_PROFILE_SPECIFIER = PONO_DEV;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		338DE7471D95393200CEC5C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EB1B58902F299CD5C57426D /* Pods-PonoAdventure.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				DEVELOPMENT_TEAM = T329N89WGK;
 				INFOPLIST_FILE = PonoAdventure/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ai.PonoAdventure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ai.ponoadventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b7f9da68-a311-4a05-ba34-a59026fe88a6";
+				PROVISIONING_PROFILE_SPECIFIER = PONO_DIST;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		338DE7491D95393200CEC5C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 985C63B0EAAC42310E3E5E76 /* Pods-PonoAdventureTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +725,7 @@
 		};
 		338DE74A1D95393200CEC5C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +740,7 @@
 		};
 		338DE74C1D95393200CEC5C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A0E097505A4F89C8F3E017 /* Pods-PonoAdventureUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PonoAdventureUITests/Info.plist;
@@ -479,6 +754,7 @@
 		};
 		338DE74D1D95393200CEC5C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBEF132709D64C30CCF2F50 /* Pods-PonoAdventureUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = PonoAdventureUITests/Info.plist;
@@ -509,6 +785,7 @@
 				338DE7471D95393200CEC5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		338DE7481D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +794,7 @@
 				338DE74A1D95393200CEC5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		338DE74B1D95393200CEC5C0 /* Build configuration list for PBXNativeTarget "PonoAdventureUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +803,7 @@
 				338DE74D1D95393200CEC5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

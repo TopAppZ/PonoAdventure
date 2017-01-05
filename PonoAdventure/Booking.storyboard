@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vbZ-56-k9f">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="50n-ay-okl">
+            <objects>
+                <viewController id="vbZ-56-k9f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHZ-ZR-xe9"/>
+                        <viewControllerLayoutGuide type="bottom" id="vvk-Ds-Lah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tao-6T-D4N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEf-wq-H2i">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="337" id="1iW-oV-VFq"/>
+                                    <constraint firstAttribute="width" constant="375" id="YVy-wQ-XqK"/>
+                                </constraints>
+                                <string key="text">Here these forms will come one by one 1) Getting user's personal details and 2) Payment options paypal/credit card 3) Payment info 4) Confirmation with QR</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MEf-wq-H2i" firstAttribute="centerX" secondItem="Tao-6T-D4N" secondAttribute="centerX" id="FvO-2v-j1u"/>
+                            <constraint firstItem="MEf-wq-H2i" firstAttribute="centerY" secondItem="Tao-6T-D4N" secondAttribute="centerY" id="PV3-Rd-fRV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZK8-pz-HRb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l10-AI-2ED" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="112.89355322338831"/>
+        </scene>
+    </scenes>
+</document>
