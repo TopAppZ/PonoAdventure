@@ -131,7 +131,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annotation = view.annotation as! CustomAnnotation
-        print(annotation.place!.name)
+        
     }
     
 }
