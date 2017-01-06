@@ -30,6 +30,7 @@
 		338DE7361D95393200CEC5C0 /* PonoAdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7351D95393200CEC5C0 /* PonoAdventureTests.swift */; };
 		338DE7411D95393200CEC5C0 /* PonoAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */; };
 		3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3395447E1DF879750079DEA6 /* CoreLocation.framework */; };
+		339D66171E1FE4F90065572E /* TabPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339D66161E1FE4F90065572E /* TabPane.storyboard */; };
 		33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F5830C1E1EF60800DB27B7 /* MapKit.framework */; };
 		33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */; };
 		49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */; };
@@ -84,6 +85,7 @@
 		338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PonoAdventureUITests.swift; sourceTree = "<group>"; };
 		338DE7421D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3395447E1DF879750079DEA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		339D66161E1FE4F90065572E /* TabPane.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabPane.storyboard; sourceTree = "<group>"; };
 		33F5830C1E1EF60800DB27B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,25 +173,22 @@
 		338DE71C1D95393200CEC5C0 /* PonoAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				339D66181E1FE77E0065572E /* Storyboards */,
 				332543191DDF8D6B0009BDE9 /* lib */,
 				332543161DDF81780009BDE9 /* Models */,
 				338DE71D1D95393200CEC5C0 /* AppDelegate.swift */,
 				338DE71F1D95393200CEC5C0 /* ViewController.swift */,
-				338DE7211D95393200CEC5C0 /* Main.storyboard */,
 				338DE7271D95393200CEC5C0 /* Assets.xcassets */,
-				338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */,
 				338DE72C1D95393200CEC5C0 /* Info.plist */,
 				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
 				3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */,
 				3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */,
-				3358BE711DBA41EA00A02AA1 /* Login.storyboard */,
 				3358BE731DBA477F00A02AA1 /* LoginViewController.swift */,
 				3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */,
 				3358BE771DBA4DF800A02AA1 /* RoundedView.swift */,
 				33525F511DBA6A0F00674133 /* RoundedButton.swift */,
 				33525F531DBA735500674133 /* ListViewController.swift */,
 				33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */,
-				33525F571DBA984E00674133 /* Booking.storyboard */,
 			);
 			path = PonoAdventure;
 			sourceTree = "<group>";
@@ -210,6 +209,18 @@
 				338DE7421D95393200CEC5C0 /* Info.plist */,
 			);
 			path = PonoAdventureUITests;
+			sourceTree = "<group>";
+		};
+		339D66181E1FE77E0065572E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				338DE7211D95393200CEC5C0 /* Main.storyboard */,
+				338DE7291D95393200CEC5C0 /* LaunchScreen.storyboard */,
+				3358BE711DBA41EA00A02AA1 /* Login.storyboard */,
+				33525F571DBA984E00674133 /* Booking.storyboard */,
+				339D66161E1FE4F90065572E /* TabPane.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		AD3D4A28757D09EF0DF9EE48 /* Pods */ = {
@@ -360,6 +371,7 @@
 				33525F581DBA984E00674133 /* Booking.storyboard in Resources */,
 				338DE72B1D95393200CEC5C0 /* LaunchScreen.storyboard in Resources */,
 				338DE7281D95393200CEC5C0 /* Assets.xcassets in Resources */,
+				339D66171E1FE4F90065572E /* TabPane.storyboard in Resources */,
 				338DE7231D95393200CEC5C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-N6-lBG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoryCell" rowHeight="100" id="yXP-9n-4J3" customClass="CategoryTableViewCell" customModule="PonoAdventure" customModuleProvider="target">
@@ -82,6 +82,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="lSF-AZ-oEp"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
@@ -105,14 +106,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-bV-rUk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RMf-bV-rUk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Auc-dx-FSz">
-                                        <rect key="frame" x="0.0" y="-64" width="828" height="736"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="828" height="623"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="140" sectionHeaderHeight="44" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-d2-0xa">
-                                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="placeCell" rowHeight="140" id="vRC-d4-FWd" customClass="PlaceTableViewCell" customModule="PonoAdventure" customModuleProvider="target">
@@ -186,24 +187,24 @@
                                                 </connections>
                                             </tableView>
                                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GCU-PG-2an">
-                                                <rect key="frame" x="414" y="64" width="414" height="672"/>
+                                                <rect key="frame" x="414" y="0.0" width="414" height="736"/>
                                             </mapView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="BmP-d2-0xa" secondAttribute="bottom" id="7Zd-Rw-6d3"/>
+                                            <constraint firstAttribute="bottom" secondItem="BmP-d2-0xa" secondAttribute="bottom" constant="-113" id="7Zd-Rw-6d3"/>
                                             <constraint firstItem="BmP-d2-0xa" firstAttribute="leading" secondItem="Auc-dx-FSz" secondAttribute="leading" id="P4V-gT-DOo"/>
-                                            <constraint firstAttribute="bottom" secondItem="GCU-PG-2an" secondAttribute="bottom" id="TBh-m5-LZN"/>
+                                            <constraint firstAttribute="bottom" secondItem="GCU-PG-2an" secondAttribute="bottom" constant="-113" id="TBh-m5-LZN"/>
                                             <constraint firstItem="GCU-PG-2an" firstAttribute="leading" secondItem="BmP-d2-0xa" secondAttribute="trailing" id="dX5-yV-JP9"/>
                                             <constraint firstAttribute="trailing" secondItem="GCU-PG-2an" secondAttribute="trailing" id="hUQ-to-pN8"/>
-                                            <constraint firstItem="BmP-d2-0xa" firstAttribute="top" secondItem="Auc-dx-FSz" secondAttribute="top" constant="64" id="uw4-sd-3r6"/>
-                                            <constraint firstItem="GCU-PG-2an" firstAttribute="top" secondItem="Auc-dx-FSz" secondAttribute="top" constant="64" id="vgo-9R-b44"/>
+                                            <constraint firstItem="BmP-d2-0xa" firstAttribute="top" secondItem="Auc-dx-FSz" secondAttribute="top" id="uw4-sd-3r6"/>
+                                            <constraint firstItem="GCU-PG-2an" firstAttribute="top" secondItem="Auc-dx-FSz" secondAttribute="top" id="vgo-9R-b44"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Auc-dx-FSz" firstAttribute="top" secondItem="RMf-bV-rUk" secondAttribute="top" constant="-64" id="AuX-xH-SVI"/>
-                                    <constraint firstAttribute="trailing" secondItem="Auc-dx-FSz" secondAttribute="trailing" id="MEf-Yl-YWd"/>
+                                    <constraint firstItem="Auc-dx-FSz" firstAttribute="top" secondItem="RMf-bV-rUk" secondAttribute="top" id="AuX-xH-SVI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Auc-dx-FSz" secondAttribute="trailing" constant="-414" id="MEf-Yl-YWd"/>
                                     <constraint firstAttribute="bottom" secondItem="Auc-dx-FSz" secondAttribute="bottom" id="SQd-9f-QH7"/>
                                     <constraint firstItem="Auc-dx-FSz" firstAttribute="leading" secondItem="RMf-bV-rUk" secondAttribute="leading" id="jtx-6Q-cyk"/>
                                 </constraints>
@@ -215,7 +216,7 @@
                             <constraint firstItem="BmP-d2-0xa" firstAttribute="width" secondItem="aJ8-Gh-9ua" secondAttribute="width" id="GG6-kE-EZ0"/>
                             <constraint firstItem="Xyq-aa-YnC" firstAttribute="top" secondItem="RMf-bV-rUk" secondAttribute="bottom" id="MBE-ge-HHy"/>
                             <constraint firstItem="Auc-dx-FSz" firstAttribute="width" secondItem="aJ8-Gh-9ua" secondAttribute="width" multiplier="2" id="e0b-PU-8C3"/>
-                            <constraint firstItem="Auc-dx-FSz" firstAttribute="height" secondItem="aJ8-Gh-9ua" secondAttribute="height" id="tUP-si-wao"/>
+                            <constraint firstItem="Auc-dx-FSz" firstAttribute="height" secondItem="aJ8-Gh-9ua" secondAttribute="height" constant="-113" id="tUP-si-wao"/>
                             <constraint firstItem="RMf-bV-rUk" firstAttribute="top" secondItem="aJ8-Gh-9ua" secondAttribute="top" id="un2-qc-KbR"/>
                             <constraint firstAttribute="trailing" secondItem="RMf-bV-rUk" secondAttribute="trailing" id="yf5-vt-Qwe"/>
                         </constraints>
