@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vbZ-56-k9f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vbZ-56-k9f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Calender View Controller-->
         <scene sceneID="50n-ay-okl">
             <objects>
-                <viewController id="vbZ-56-k9f" sceneMemberID="viewController">
+                <viewController id="vbZ-56-k9f" customClass="CalenderViewController" customModule="PonoAdventure" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cHZ-ZR-xe9"/>
                         <viewControllerLayoutGuide type="bottom" id="vvk-Ds-Lah"/>
@@ -18,24 +21,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEf-wq-H2i">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c7r-vJ-tft">
+                                <rect key="frame" x="0.0" y="62" width="375" height="53"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="337" id="1iW-oV-VFq"/>
-                                    <constraint firstAttribute="width" constant="375" id="YVy-wQ-XqK"/>
+                                    <constraint firstAttribute="height" constant="53" id="w7m-QE-K62"/>
                                 </constraints>
-                                <string key="text">Here these forms will come one by one 1) Getting user's personal details and 2) Payment options paypal/credit card 3) Payment info 4) Confirmation with QR</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AzT-Jt-m5C">
+                                <rect key="frame" x="41" y="133" width="270" height="244"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MEf-wq-H2i" firstAttribute="centerX" secondItem="Tao-6T-D4N" secondAttribute="centerX" id="FvO-2v-j1u"/>
-                            <constraint firstItem="MEf-wq-H2i" firstAttribute="centerY" secondItem="Tao-6T-D4N" secondAttribute="centerY" id="PV3-Rd-fRV"/>
+                            <constraint firstItem="c7r-vJ-tft" firstAttribute="top" secondItem="cHZ-ZR-xe9" secondAttribute="bottom" constant="42" id="EmG-19-2PN"/>
+                            <constraint firstAttribute="trailing" secondItem="c7r-vJ-tft" secondAttribute="trailing" id="H7F-0b-HxJ"/>
+                            <constraint firstAttribute="trailing" secondItem="AzT-Jt-m5C" secondAttribute="trailing" constant="64" id="JgW-xs-K7D"/>
+                            <constraint firstItem="vvk-Ds-Lah" firstAttribute="top" secondItem="AzT-Jt-m5C" secondAttribute="bottom" constant="290" id="TE1-5h-qCa"/>
+                            <constraint firstItem="c7r-vJ-tft" firstAttribute="leading" secondItem="Tao-6T-D4N" secondAttribute="leading" id="h0Y-k4-0os"/>
+                            <constraint firstItem="AzT-Jt-m5C" firstAttribute="leading" secondItem="Tao-6T-D4N" secondAttribute="leading" constant="41" id="mMc-KY-zwZ"/>
+                            <constraint firstItem="AzT-Jt-m5C" firstAttribute="top" secondItem="c7r-vJ-tft" secondAttribute="bottom" constant="18" id="ro3-gE-ygR"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZK8-pz-HRb"/>
+                    <connections>
+                        <outlet property="calendarView" destination="AzT-Jt-m5C" id="PCn-FS-Peg"/>
+                        <outlet property="menuView" destination="c7r-vJ-tft" id="RCU-3r-OoF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l10-AI-2ED" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
