@@ -19,6 +19,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var mkMap: MKMapView!
     let initialLocation = CLLocation(latitude: 21.461816, longitude: -157.980067)
     let regionRadius: CLLocationDistance = 60000
+    var selectedPlace:Place?
+    var isFromMap:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         searchController.searchResultsUpdater = self
@@ -61,13 +63,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell?.placeName.text = self.filteredPlaces[indexPath.row].name
             let imageURL = URL(string: filteredPlaces[indexPath.row].imagePath)
             cell?.PlaceImage.kf.setImage(with: imageURL)
-            cell?.address.text = filteredPlaces[indexPath.row].address_1 + ", " + filteredPlaces[indexPath.row].address_2 + ", " + filteredPlaces[indexPath.row].state + " (" +  String(filteredPlaces[indexPath.row].distance) + " KM)"
+            cell?.address.text = filteredPlaces[indexPath.row].address_1 + ", " + filteredPlaces[indexPath.row].address_2 + ", " + filteredPlaces[indexPath.row].state + " (" +  String(format: "%.2f", filteredPlaces[indexPath.row].distance) + " KM)"
             return cell!
         }
         cell?.placeName.text = self.places[indexPath.row].name
         let imageURL = URL(string: places[indexPath.row].imagePath)
         cell?.PlaceImage.kf.setImage(with: imageURL)
-        cell?.address.text = places[indexPath.row].address_1 + ", " + places[indexPath.row].address_2 + ", " + places[indexPath.row].state + " (" +  String(places[indexPath.row].distance) + " KM)"
+        cell?.address.text = places[indexPath.row].address_1 + ", " + places[indexPath.row].address_2 + ", " + places[indexPath.row].state + " (" +  String(format: "%.2f", places[indexPath.row].distance) + " KM)"
         return cell!
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -131,7 +133,26 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         let annotation = view.annotation as! CustomAnnotation
-        
+        selectedPlace = annotation.place
+        isFromMap = true
+        performSegue(withIdentifier: "toPlaceDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = tableView.indexPathForSelectedRow?.row
+        if !isFromMap {
+            if searchController.isActive && searchController.searchBar.text != "" {
+                selectedPlace = filteredPlaces[indexPath!]
+            } else {
+                selectedPlace = places[indexPath!]
+            }
+        }
+        if segue.identifier == "toPlaceDetails" {
+            let destNav = segue.destination as! UINavigationController
+            let dest = destNav.topViewController as! PlaceDetailsViewController            
+            dest.place = selectedPlace
+        }
+        isFromMap = false
     }
     
 }

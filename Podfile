@@ -10,6 +10,7 @@ target 'PonoAdventure' do
   pod 'Gloss', '~> 1.1'
   pod 'Kingfisher', '~> 3.0'
   pod 'PKHUD'
+  pod 'CVCalendar', '~> 1.4.1'
   target 'PonoAdventureTests' do
     inherit! :search_paths
     # Pods for testing

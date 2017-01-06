@@ -31,6 +31,7 @@
 		338DE7411D95393200CEC5C0 /* PonoAdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DE7401D95393200CEC5C0 /* PonoAdventureUITests.swift */; };
 		3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3395447E1DF879750079DEA6 /* CoreLocation.framework */; };
 		339D66171E1FE4F90065572E /* TabPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339D66161E1FE4F90065572E /* TabPane.storyboard */; };
+		33D0F2251E201B6200DAE925 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0F2241E201B6200DAE925 /* CalenderViewController.swift */; };
 		33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F5830C1E1EF60800DB27B7 /* MapKit.framework */; };
 		33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */; };
 		49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */; };
@@ -86,6 +87,7 @@
 		338DE7421D95393200CEC5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3395447E1DF879750079DEA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		339D66161E1FE4F90065572E /* TabPane.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabPane.storyboard; sourceTree = "<group>"; };
+		33D0F2241E201B6200DAE925 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		33F5830C1E1EF60800DB27B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				33525F511DBA6A0F00674133 /* RoundedButton.swift */,
 				33525F531DBA735500674133 /* ListViewController.swift */,
 				33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */,
+				33D0F2241E201B6200DAE925 /* CalenderViewController.swift */,
 			);
 			path = PonoAdventure;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				3358BE781DBA4DF800A02AA1 /* RoundedView.swift in Sources */,
 				3358BE761DBA4BA800A02AA1 /* CustomTextField.swift in Sources */,
 				3358BE741DBA477F00A02AA1 /* LoginViewController.swift in Sources */,
+				33D0F2251E201B6200DAE925 /* CalenderViewController.swift in Sources */,
 				338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */,
 				33525F521DBA6A0F00674133 /* RoundedButton.swift in Sources */,
 				33525F561DBA7AE300674133 /* PlaceTableViewCell.swift in Sources */,

@@ -7,15 +7,32 @@
 //
 
 import UIKit
-
+import Kingfisher
 class PlaceDetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-
+    @IBOutlet weak var placeName: UILabel!
+    @IBOutlet weak var distance: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var bookButton: UIView!
+    @IBOutlet weak var image: UIImageView!
+    var place:Place?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.placeName.text = (place?.name)!
+        self.distance.text = String(format: "%.2f", (place?.distance)!) + " KM"
+        self.address.text = (place?.address_1)! + ", " + (place?.address_2)! + ", " + (place?.state)! + ", " + (place?.zip)!
+        self.desc.text = (place?.description)!
+        let imageURL = URL(string: (place?.imagePath)!)
+        image.kf.setImage(with: imageURL)
+        if (place?.price)! != "NA" {
+            self.price.text = "$" + (place?.price)! + "/per person"
+        } else {
+            self.bookButton.isHidden = true
+        }        
         // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
@@ -43,9 +60,10 @@ class PlaceDetailsViewController: UIViewController {
     }
     */
     @IBAction func actionBack(_ sender: AnyObject) {
-        dismiss(animated: true) { 
+        dismiss(animated: true) {
             
         }
     }
+    
 
 }
