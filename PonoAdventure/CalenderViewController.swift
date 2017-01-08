@@ -18,11 +18,14 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
     @IBOutlet weak var height: NSLayoutConstraint!
     @IBOutlet weak var monthYearLabel: UILabel!
     var months:[String] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    var availibility:[String] = ["2017-01-23T18:30:00.000Z", "2017-02-24T18:30:00.000Z", "2017-01-25T18:30:00.000Z", "2017-01-26T18:30:00.000Z", "2017-01-27T18:30:00.000Z"]
+    var availibility:[String] = []
     var currentYear = 2017
     var currentMonth = 1
+    var place:Place?
+    var shouldPerformSegue:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        availibility = (place?.schedule)!
         let width = (self.view.frame.width - CGFloat(leftRightMargin) * 7.0) / CGFloat(numberOfCell)
         let layout = self.col.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: width, height:CGFloat(heightAdjustment))
@@ -99,6 +102,9 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
             
         } else {
             cell.dateLabel.text = ""
+            cell.dateLabelHolder.backgroundColor = UIColor.clear
+            cell.dateLabelHolder.layer.cornerRadius = 0
+            cell.dateLabel.textColor = UIColor.black
         }
         
         
@@ -120,7 +126,13 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        print(items[indexPath.item])
+        let formatter  = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
+        let date = formatter.date(from: self.items[indexPath.row])
+        if(isAvailable(date: date!, dates: availibility)){
+            performSegue(withIdentifier: "toBookingForm", sender: self)
+        }
     }
     
     @IBAction func prevMonthAction(_ sender: Any) {

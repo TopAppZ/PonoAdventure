@@ -64,6 +64,11 @@ class PlaceDetailsViewController: UIViewController {
             
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBooking" {
+            let dest = segue.destination as! CalenderViewController
+            dest.place = place
+        }
+    }
 
 }
