@@ -1,24 +1,24 @@
 PODS:
   - Alamofire (4.1.0)
-  - CVCalendar (1.4.1)
+  - FSCalendar (2.6.0)
   - Gloss (1.1.0)
   - Kingfisher (3.2.1)
   - PKHUD (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
-  - CVCalendar (~> 1.4.1)
+  - FSCalendar
   - Gloss (~> 1.1)
   - Kingfisher (~> 3.0)
   - PKHUD
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
-  CVCalendar: 61912eb5dc39c3bcfe22a731147a559a696fbc15
+  FSCalendar: c00fa5f4c3ec343ee6f7b804ae19322e9898bb84
   Gloss: a8340c124ff69c5d1c12e06c252373f4a16d2958
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
   PKHUD: 2bb45c936bb8afa39f3cd33ec14e8cc89f624255
 
-PODFILE CHECKSUM: 097614c23d5c071337f10d5e7ea4d7dd4491fe4a
+PODFILE CHECKSUM: 87ae34a9724a38ff0b5de96db5f476f73fadad05
 
 COCOAPODS: 1.0.1
