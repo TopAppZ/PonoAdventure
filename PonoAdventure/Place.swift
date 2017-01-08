@@ -23,6 +23,7 @@ class Place:Decodable {
     var imagePath:String
     var location:[String:Any]
     var distance:Double
+    var schedule:[String]
     
     required init?(json: JSON) {
         self.id = ("_id" <~~ json)!
@@ -40,6 +41,7 @@ class Place:Decodable {
         self.imagePath = ("image" <~~ json)!
         self.location = ("location" <~~ json)!
         self.distance = ("dis" <~~ json)!
+        self.schedule = ("schedule" <~~ json)!
     }
     /*func toJSON() -> JSON? {
         return jsonify([

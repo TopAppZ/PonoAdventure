@@ -369,7 +369,7 @@
                                         <rect key="frame" x="0.0" y="-1" width="414" height="56"/>
                                         <color key="backgroundColor" red="0.0" green="0.77647058823529413" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="JYD-sK-aFV" kind="show" id="cBJ-Bq-dt8"/>
+                                            <segue destination="JYD-sK-aFV" kind="show" identifier="toBooking" id="cBJ-Bq-dt8"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$120 per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tut-bX-oRc">

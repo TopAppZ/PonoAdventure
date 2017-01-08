@@ -32,7 +32,7 @@
         <scene sceneID="ld5-oD-2Qw">
             <objects>
                 <navigationController id="4nA-Mm-NFp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" id="IKI-Nx-B99"/>
+                    <tabBarItem key="tabBarItem" title="Category" image="places" id="IKI-Nx-B99"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jfn-Tk-7Qa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -55,11 +55,11 @@
             </objects>
             <point key="canvasLocation" x="1206" y="-980"/>
         </scene>
-        <!--Favourite-->
+        <!--Notification-->
         <scene sceneID="yej-xv-h1L">
             <objects>
                 <navigationController id="AlM-p8-zbr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourite" id="7zZ-ol-9q4"/>
+                    <tabBarItem key="tabBarItem" title="Notification" image="notification" id="7zZ-ol-9q4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kq8-17-qIJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -73,7 +73,7 @@
         <scene sceneID="cfC-s8-ahV">
             <objects>
                 <navigationController id="hR0-yd-bXo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="3xn-q4-he3"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings" id="3xn-q4-he3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m5u-rI-Ywp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -84,4 +84,9 @@
             <point key="canvasLocation" x="-207" y="486"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="notification" width="30" height="30"/>
+        <image name="places" width="30" height="30"/>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>

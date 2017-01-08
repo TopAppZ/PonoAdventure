@@ -1,16 +1,14 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '9.0'
-
+platform :ios, '9.0'
 target 'PonoAdventure' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  pod 'FSCalendar'
   # Pods for PonoAdventure
   pod 'Alamofire', '~> 4.0'
   pod 'Gloss', '~> 1.1'
   pod 'Kingfisher', '~> 3.0'
   pod 'PKHUD'
-  pod 'CVCalendar', '~> 1.4.1'
   target 'PonoAdventureTests' do
     inherit! :search_paths
     # Pods for testing

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3321D14D1E2144EC00093F89 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3321D14C1E2144EC00093F89 /* QuartzCore.framework */; };
 		332543181DDF81B20009BDE9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332543171DDF81B20009BDE9 /* Category.swift */; };
 		3325431D1DDF91A90009BDE9 /* WebInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325431C1DDF91A90009BDE9 /* WebInterface.swift */; };
 		3325431F1DDF91EC0009BDE9 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3325431E1DDF91EC0009BDE9 /* Web.swift */; };
+		333FC26D1E228FA4000F7A08 /* BookingFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333FC26C1E228FA4000F7A08 /* BookingFormViewController.swift */; };
 		33525F521DBA6A0F00674133 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F511DBA6A0F00674133 /* RoundedButton.swift */; };
 		33525F541DBA735500674133 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F531DBA735500674133 /* ListViewController.swift */; };
 		33525F561DBA7AE300674133 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */; };
@@ -32,6 +34,7 @@
 		3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3395447E1DF879750079DEA6 /* CoreLocation.framework */; };
 		339D66171E1FE4F90065572E /* TabPane.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 339D66161E1FE4F90065572E /* TabPane.storyboard */; };
 		33D0F2251E201B6200DAE925 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0F2241E201B6200DAE925 /* CalenderViewController.swift */; };
+		33D0F22A1E203C1500DAE925 /* CalenderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D0F2291E203C1500DAE925 /* CalenderCollectionViewCell.swift */; };
 		33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33F5830C1E1EF60800DB27B7 /* MapKit.framework */; };
 		33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */; };
 		49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */; };
@@ -57,9 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3321D14C1E2144EC00093F89 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		332543171DDF81B20009BDE9 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3325431C1DDF91A90009BDE9 /* WebInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebInterface.swift; sourceTree = "<group>"; };
 		3325431E1DDF91EC0009BDE9 /* Web.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
+		333FC26C1E228FA4000F7A08 /* BookingFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingFormViewController.swift; sourceTree = "<group>"; };
 		33525F511DBA6A0F00674133 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		33525F531DBA735500674133 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -88,6 +93,8 @@
 		3395447E1DF879750079DEA6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		339D66161E1FE4F90065572E /* TabPane.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabPane.storyboard; sourceTree = "<group>"; };
 		33D0F2241E201B6200DAE925 /* CalenderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		33D0F2261E20308800DAE925 /* PonoAdventure-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PonoAdventure-Bridging-Header.h"; sourceTree = "<group>"; };
+		33D0F2291E203C1500DAE925 /* CalenderCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalenderCollectionViewCell.swift; sourceTree = "<group>"; };
 		33F5830C1E1EF60800DB27B7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		3FD81BC21C7637A7AC65E035 /* Pods-PonoAdventureTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PonoAdventureTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PonoAdventureTests/Pods-PonoAdventureTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3321D14D1E2144EC00093F89 /* QuartzCore.framework in Frameworks */,
 				33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */,
 				3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */,
 				49630BE4FFDCCDD5A90A9A05 /* Pods_PonoAdventure.framework in Frameworks */,
@@ -131,6 +139,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3321D14E1E216E0E00093F89 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				338DE71F1D95393200CEC5C0 /* ViewController.swift */,
+				3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */,
+				3358BE731DBA477F00A02AA1 /* LoginViewController.swift */,
+				33525F531DBA735500674133 /* ListViewController.swift */,
+				33D0F2241E201B6200DAE925 /* CalenderViewController.swift */,
+				333FC26C1E228FA4000F7A08 /* BookingFormViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3321D14F1E216E2400093F89 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */,
+				33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */,
+				33D0F2291E203C1500DAE925 /* CalenderCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		332543161DDF81780009BDE9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +177,9 @@
 				3325431C1DDF91A90009BDE9 /* WebInterface.swift */,
 				3325431E1DDF91EC0009BDE9 /* Web.swift */,
 				33F5830E1E1F020500DB27B7 /* CustomAnnotation.swift */,
+				3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */,
+				3358BE771DBA4DF800A02AA1 /* RoundedView.swift */,
+				33525F511DBA6A0F00674133 /* RoundedButton.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -175,23 +209,16 @@
 		338DE71C1D95393200CEC5C0 /* PonoAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				338DE71D1D95393200CEC5C0 /* AppDelegate.swift */,
 				339D66181E1FE77E0065572E /* Storyboards */,
 				332543191DDF8D6B0009BDE9 /* lib */,
 				332543161DDF81780009BDE9 /* Models */,
-				338DE71D1D95393200CEC5C0 /* AppDelegate.swift */,
-				338DE71F1D95393200CEC5C0 /* ViewController.swift */,
+				3321D14F1E216E2400093F89 /* Cells */,
+				3321D14E1E216E0E00093F89 /* ViewControllers */,
 				338DE7271D95393200CEC5C0 /* Assets.xcassets */,
 				338DE72C1D95393200CEC5C0 /* Info.plist */,
 				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
-				3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */,
-				3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */,
-				3358BE731DBA477F00A02AA1 /* LoginViewController.swift */,
-				3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */,
-				3358BE771DBA4DF800A02AA1 /* RoundedView.swift */,
-				33525F511DBA6A0F00674133 /* RoundedButton.swift */,
-				33525F531DBA735500674133 /* ListViewController.swift */,
-				33525F551DBA7AE300674133 /* PlaceTableViewCell.swift */,
-				33D0F2241E201B6200DAE925 /* CalenderViewController.swift */,
+				33D0F2261E20308800DAE925 /* PonoAdventure-Bridging-Header.h */,
 			);
 			path = PonoAdventure;
 			sourceTree = "<group>";
@@ -242,6 +269,7 @@
 		C7CAF4953AB9A638C528A841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3321D14C1E2144EC00093F89 /* QuartzCore.framework */,
 				33F5830C1E1EF60800DB27B7 /* MapKit.framework */,
 				3395447E1DF879750079DEA6 /* CoreLocation.framework */,
 				766D2CEAEEA05D2B7E05E848 /* Pods_PonoAdventure.framework */,
@@ -322,13 +350,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Agileinf;
 				TargetAttributes = {
 					338DE7191D95393200CEC5C0 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = T329N89WGK;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					338DE7301D95393200CEC5C0 = {
@@ -528,7 +556,9 @@
 				3358BE741DBA477F00A02AA1 /* LoginViewController.swift in Sources */,
 				33D0F2251E201B6200DAE925 /* CalenderViewController.swift in Sources */,
 				338DE7201D95393200CEC5C0 /* ViewController.swift in Sources */,
+				333FC26D1E228FA4000F7A08 /* BookingFormViewController.swift in Sources */,
 				33525F521DBA6A0F00674133 /* RoundedButton.swift in Sources */,
+				33D0F22A1E203C1500DAE925 /* CalenderCollectionViewCell.swift in Sources */,
 				33525F561DBA7AE300674133 /* PlaceTableViewCell.swift in Sources */,
 				3325431F1DDF91EC0009BDE9 /* Web.swift in Sources */,
 				33F5830F1E1F020500DB27B7 /* CustomAnnotation.swift in Sources */,
@@ -612,6 +642,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -662,6 +693,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -691,7 +723,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C349916F470E19AD36559DA1 /* Pods-PonoAdventure.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T329N89WGK;
@@ -701,8 +735,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fb5253a8-1f28-4c6d-9c77-c6c0f3d67ac4";
 				PROVISIONING_PROFILE_SPECIFIER = PONO_DEV;
+				SWIFT_OBJC_BRIDGING_HEADER = "PonoAdventure/PonoAdventure-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -710,7 +746,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4EB1B58902F299CD5C57426D /* Pods-PonoAdventure.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				DEVELOPMENT_TEAM = T329N89WGK;
 				INFOPLIST_FILE = PonoAdventure/Info.plist;
@@ -719,8 +757,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b7f9da68-a311-4a05-ba34-a59026fe88a6";
 				PROVISIONING_PROFILE_SPECIFIER = PONO_DIST;
+				SWIFT_OBJC_BRIDGING_HEADER = "PonoAdventure/PonoAdventure-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
