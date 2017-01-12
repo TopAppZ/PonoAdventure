@@ -48,6 +48,7 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         let weekday = getDayOfWeek("01/" + String(month) + "/" + String(year))
         startIndex = weekday!
         var items = [String](repeating: "", count: numDays+weekday!)
+        
         while 1 <= numDays {
             items[startIndex] = fmt.string(from: startDate!)
             //print(fmt.string(from: startDate!))
@@ -111,6 +112,8 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView =
+            collectionView.dequeueReusableSupplementaryView(ofKind: kind,withReuseIdentifier: "header", for: indexPath)
         switch kind {
             
         case UICollectionElementKindSectionHeader:
@@ -121,6 +124,7 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         default:
             assert(false, "Unexpected element kind")
         }
+        return headerView
     }
     // MARK: - UICollectionViewDelegate protocol
     
@@ -165,10 +169,13 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         let convertedDate = formatter.string(from: date)
+        print(convertedDate)
         if dates.contains(convertedDate) {
             print("avail")
             return true
         }
         return false
     }
+    
+    
 }

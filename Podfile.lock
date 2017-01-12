@@ -1,24 +1,47 @@
 PODS:
   - Alamofire (4.1.0)
+  - CardIO (5.4.1)
   - FSCalendar (2.6.0)
   - Gloss (1.1.0)
   - Kingfisher (3.2.1)
+  - PayPal-iOS-SDK (2.16.1):
+    - PayPal-iOS-SDK/CardIO (= 2.16.1)
+    - PayPal-iOS-SDK/Core (= 2.16.1)
+  - PayPal-iOS-SDK/CardIO (2.16.1):
+    - CardIO (~> 5.4.1)
+  - PayPal-iOS-SDK/Core (2.16.1)
   - PKHUD (4.0.0)
+  - SwiftValidator (4.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - FSCalendar
   - Gloss (~> 1.1)
   - Kingfisher (~> 3.0)
+  - PayPal-iOS-SDK
   - PKHUD
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 2a6c23ad9efd76127f6109445515cb9780e5ad92
+    :git: https://github.com/jpotts18/SwiftValidator.git
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   FSCalendar: c00fa5f4c3ec343ee6f7b804ae19322e9898bb84
   Gloss: a8340c124ff69c5d1c12e06c252373f4a16d2958
   Kingfisher: 64ef28c6d3d6f344e3ae2d7f5c9da80439505d99
+  PayPal-iOS-SDK: 774ac7de2d7c3b0ee7e8a35f8b347fd07787321b
   PKHUD: 2bb45c936bb8afa39f3cd33ec14e8cc89f624255
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
 
-PODFILE CHECKSUM: 87ae34a9724a38ff0b5de96db5f476f73fadad05
+PODFILE CHECKSUM: 4d64595e23e5a636ba3d1029aa9cf7aae4908dcb
 
 COCOAPODS: 1.0.1

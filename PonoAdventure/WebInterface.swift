@@ -11,4 +11,5 @@ import Foundation
 protocol WebInterface {
     func getAllCategories(completion: @escaping (_:[Category]) -> Void)
     func getPlacesByCategory(completion:@escaping(_:[Place]) -> Void, category:String, loc:String)
+    func signUp(completion:@escaping(_:User) -> Void, userObj:User)
 }
