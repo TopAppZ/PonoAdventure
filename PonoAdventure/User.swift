@@ -9,8 +9,7 @@ class User:Decodable {
     var state:Int?
     var deviceID:String?
     var fullAddress:String?
-    required init?(json: JSON) {
-        
+    required init?(json: JSON) {        
         self.id = ("_id" <~~ json)!
         self.fullName = ("full_name" <~~ json)!
         self.email = ("email" <~~ json)!

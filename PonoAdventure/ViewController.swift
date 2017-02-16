@@ -30,9 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.hidesBackButton = true
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
         locationManager.startUpdatingLocation()
         HUD.show(.labeledProgress(title: "Wait", subtitle: "Fetching your current location"))
     }
@@ -87,6 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         HUD.hide(animated: true)
         
     }
+    
     
 
 

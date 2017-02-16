@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 import Gloss
 class Web:WebInterface {
-    private let apiURL = "http://192.168.3.102:3000/api/"
+    //52.39.242.221
+    private let apiURL = "http://52.39.242.221:3000/api/"
     func getAllCategories(completion: @escaping ([Category]) -> Void) {
         Alamofire.request(self.apiURL + "category/").responseJSON { response in
             if let arr = response.result.value {
@@ -29,9 +30,31 @@ class Web:WebInterface {
     }
     func signUp(completion: @escaping (User) -> Void, userObj: User) {
         Alamofire.request(self.apiURL + "user", method: .post, parameters: userObj.toJSON()!, encoding: JSONEncoding.default).responseJSON { (response) in
+            print(response)
             let json = response.result.value as! JSON
             completion(User(json: json)!)
         }
     }
-    
+    func login(completion: @escaping (User?) -> Void, params: [String : String]) {
+        Alamofire.request(self.apiURL + "user/login", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            if response.result.isSuccess {
+                let json = response.result.value as! JSON
+                completion(User(json: json)!)
+            } else if response.result.isFailure {
+                completion(nil)
+            }
+        }
+        
+    }
+    func notification(completion: @escaping (Any?) -> Void, params: [String : Any]) {
+        Alamofire.request(self.apiURL + "notification", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            completion(response.result.value as! JSON)
+        }
+    }
+    func book(userID: String, placeId: String, completion: @escaping (Any?) -> Void, params: [String : Any]) {
+        let url = self.apiURL + "user/" + userID + "/book/" + placeId
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            completion(response.result.value as! JSON)
+        }
+    }
 }

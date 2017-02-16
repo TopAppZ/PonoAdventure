@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftValidator
+import PKHUD
 class SignUpViewController: UIViewController, UIScrollViewDelegate, ValidationDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var scrollview: UIScrollView!
@@ -54,9 +55,14 @@ class SignUpViewController: UIViewController, UIScrollViewDelegate, ValidationDe
             "state":2,
             "device_id":UserDefaults.standard.string(forKey: "deviceID") ?? ""
             ])
+        HUD.show(.labeledProgress(title: "Wait", subtitle: "Signing you up!"))
         let w = Web()
         w.signUp(completion: { (ruser) in
-            print(ruser.fullName!)
+            HUD.hide()
+            UserDefaults.standard.setValue(ruser.id, forKey: "userId")
+            let storyboard = UIStoryboard(name: "TabPane", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabPane") as! UITabBarController
+            self.navigationController?.pushViewController(initialViewController, animated: true)
         }, userObj: user!)
     }
 

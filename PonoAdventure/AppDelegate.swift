@@ -8,12 +8,16 @@
 
 import UIKit
 import CoreData
+import CoreLocation
+import Alamofire
+import UserNotifications
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     var window: UIWindow?
-
-
+    let locationManager = CLLocationManager()
+    var _currentLocation:CLLocation?
+    let web = Web()
+    var isFirstLocation:Bool = true
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 198.0/255.0, blue: 255.0/255.0, alpha: 1.0)
@@ -23,6 +27,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction: "YOUR_CLIENT_ID_FOR_PRODUCTION",
                                                               PayPalEnvironmentSandbox: "ARKEBeYESAbgFRheBDU2fh532e_elQbGWSUSSRKQDm96Zq8dq2jHRWW4XfCWddcOg8gCrnifRfdo_Xht"])
         registerForPushNotifications(application: application)
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                // Enable or disable features based on authorization.
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let id = UserDefaults.standard.string(forKey: "userId")
+        if id != nil {
+            let storyboard = UIStoryboard(name: "TabPane", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabPane") as! UITabBarController
+            initialViewController.selectedIndex = 0
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        } else {
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Login") as! UINavigationController
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
+        }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = 1
+        locationManager.distanceFilter = 10
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.activityType = CLActivityType.automotiveNavigation
+        locationManager.allowsBackgroundLocationUpdates = true
+        if UserDefaults.standard.string(forKey: "tracking") == nil {
+            UserDefaults.standard.set(true, forKey: "tracking")
+        }
         return true
     }
 
@@ -34,10 +70,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        if UserDefaults.standard.bool(forKey: "tracking") {
+            locationManager.startUpdatingLocation()
+        }
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        locationManager.stopUpdatingLocation()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
@@ -125,6 +166,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if(_currentLocation == nil){
+            _currentLocation = locations.first!
+        }
+        let distance = _currentLocation?.distance(from: locations.first!)
+        print(distance!)
+        if distance! > 10 {
+        
+            let id = UserDefaults.standard.string(forKey: "userId")
+            if id != nil {
+                web.notification(completion: { (response) in
+                    print(response ?? "")
+                }, params: ["_id":id!,"location":["lat":locations.first!.coordinate.latitude, "lon":locations.first!.coordinate.longitude]])
+            }
+        
+        
+            //print(String(describing: locations.last?.coordinate.latitude))
+            /*if #available(iOS 10.0, *) {
+                let requestIdentifier = "SampleRequest"
+                let content = UNMutableNotificationContent()
+                content.title = "Locatoin monitored"
+                content.subtitle = "Location changed"
+                content.body = "(" + String(describing: locations.last!.coordinate.latitude) + "," + String(describing: locations.last!.coordinate.longitude) + ")"
+                content.sound = UNNotificationSound.default()
+                let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 1.0, repeats: false)
+                let request = UNNotificationRequest(identifier:requestIdentifier, content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request){(error) in
+                    
+                    if (error != nil){
+                        
+                        print(error ?? "")
+                    }
+                }
+            } else {
+                // Fallback on earlier versions
+            }*/
+        }
+        
+        
     }
 
 }

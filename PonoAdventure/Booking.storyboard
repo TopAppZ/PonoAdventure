@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vbZ-56-k9f">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vbZ-56-k9f">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -386,11 +386,11 @@
                                                             <constraint firstAttribute="height" constant="50" id="wDb-OM-ecT"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-tF-ICv">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SNI-tF-ICv">
                                                         <rect key="frame" x="58" y="0.0" width="340" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                     </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -602,6 +602,9 @@
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-PE-J7Q">
                                                         <rect key="frame" x="203" y="11" width="189" height="31"/>
                                                         <color key="minimumTrackTintColor" red="0.0" green="0.77647058820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="strengthChnagedAction:" destination="ZIO-7E-LRc" eventType="valueChanged" id="x98-uy-elZ"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -647,6 +650,9 @@
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="3gm-rH-zgI">
                                                         <rect key="frame" x="203" y="11" width="189" height="31"/>
                                                         <color key="minimumTrackTintColor" red="0.0" green="0.77647058820000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <connections>
+                                                            <action selector="dareChnagedAction:" destination="ZIO-7E-LRc" eventType="valueChanged" id="LVp-KN-BPZ"/>
+                                                        </connections>
                                                     </slider>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -767,12 +773,14 @@
                         <outlet property="canSwim" destination="ygL-Jm-xRB" id="Kuw-Vz-jIm"/>
                         <outlet property="contactNumber" destination="F8k-Ka-0l6" id="c5m-HF-xtb"/>
                         <outlet property="dare" destination="3gm-rH-zgI" id="FXO-Xt-C4f"/>
+                        <outlet property="dareLabel" destination="nma-yT-M1y" id="Scr-kY-1Sa"/>
                         <outlet property="fullAddress" destination="SNI-tF-ICv" id="RjL-14-hFT"/>
                         <outlet property="fullName" destination="inD-C7-WdM" id="82J-VW-jeX"/>
                         <outlet property="noPersons" destination="OTR-oe-Sv2" id="pez-a4-XiR"/>
                         <outlet property="scrollView" destination="ShR-Wl-kqI" id="ODx-0F-3Wc"/>
                         <outlet property="sex" destination="X6t-hJ-vhS" id="dDD-lN-CQa"/>
                         <outlet property="strength" destination="mh2-PE-J7Q" id="ZwG-uC-bMT"/>
+                        <outlet property="strengthLabel" destination="u4d-ow-M5b" id="k9B-6f-roO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L6b-Ux-2je" userLabel="First Responder" sceneMemberID="firstResponder"/>
