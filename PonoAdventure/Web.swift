@@ -48,7 +48,12 @@ class Web:WebInterface {
     }
     func notification(completion: @escaping (Any?) -> Void, params: [String : Any]) {
         Alamofire.request(self.apiURL + "notification", method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
-            completion(response.result.value as! JSON)
+            print(response.result)
+            if response.result.isSuccess {
+                completion(response.result.value as! JSON)
+            } else if response.result.isFailure {
+                completion(nil)
+            }
         }
     }
     func book(userID: String, placeId: String, completion: @escaping (Any?) -> Void, params: [String : Any]) {

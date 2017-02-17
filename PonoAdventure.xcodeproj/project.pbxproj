@@ -20,6 +20,8 @@
 		3358BE741DBA477F00A02AA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE731DBA477F00A02AA1 /* LoginViewController.swift */; };
 		3358BE761DBA4BA800A02AA1 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */; };
 		3358BE781DBA4DF800A02AA1 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3358BE771DBA4DF800A02AA1 /* RoundedView.swift */; };
+		335A5C651E56640D001FAE35 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335A5C631E56640D001FAE35 /* UserNotifications.framework */; };
+		335A5C661E56640D001FAE35 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335A5C641E56640D001FAE35 /* UserNotificationsUI.framework */; };
 		335AA6621DF7153700F72AE7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA6611DF7153700F72AE7 /* Place.swift */; };
 		3369CC341DB6BBD40029C1D1 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */; };
 		3369CC361DB6CC030029C1D1 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */; };
@@ -81,6 +83,8 @@
 		3358BE731DBA477F00A02AA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3358BE751DBA4BA800A02AA1 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		3358BE771DBA4DF800A02AA1 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		335A5C631E56640D001FAE35 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		335A5C641E56640D001FAE35 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		335AA6611DF7153700F72AE7 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335A5C651E56640D001FAE35 /* UserNotifications.framework in Frameworks */,
+				335A5C661E56640D001FAE35 /* UserNotificationsUI.framework in Frameworks */,
 				3321D14D1E2144EC00093F89 /* QuartzCore.framework in Frameworks */,
 				33F5830D1E1EF60800DB27B7 /* MapKit.framework in Frameworks */,
 				3395447F1DF879750079DEA6 /* CoreLocation.framework in Frameworks */,
@@ -154,6 +160,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3317AEEC1E5712C10016451B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		3321D14E1E216E0E00093F89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +253,7 @@
 				3321D14E1E216E0E00093F89 /* ViewControllers */,
 				338DE7271D95393200CEC5C0 /* Assets.xcassets */,
 				338DE72C1D95393200CEC5C0 /* Info.plist */,
-				338DE7241D95393200CEC5C0 /* PonoAdventure.xcdatamodeld */,
+				3317AEEC1E5712C10016451B /* CoreData */,
 				33D0F2261E20308800DAE925 /* PonoAdventure-Bridging-Header.h */,
 			);
 			path = PonoAdventure;
@@ -291,6 +305,8 @@
 		C7CAF4953AB9A638C528A841 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				335A5C631E56640D001FAE35 /* UserNotifications.framework */,
+				335A5C641E56640D001FAE35 /* UserNotificationsUI.framework */,
 				333FC2701E22B8E6000F7A08 /* AVFoundation.framework */,
 				333FC26E1E22B8DE000F7A08 /* Accelerate.framework */,
 				3321D14C1E2144EC00093F89 /* QuartzCore.framework */,
@@ -769,7 +785,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T329N89WGK;
 				INFOPLIST_FILE = PonoAdventure/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ai.ponoadventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -794,7 +810,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T329N89WGK;
 				INFOPLIST_FILE = PonoAdventure/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ai.ponoadventure;
 				PRODUCT_NAME = "$(TARGET_NAME)";

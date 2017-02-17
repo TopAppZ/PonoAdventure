@@ -11,8 +11,9 @@ import CoreData
 import CoreLocation
 import Alamofire
 import UserNotifications
+import Gloss
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
     let locationManager = CLLocationManager()
     var _currentLocation:CLLocation?
@@ -59,6 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         if UserDefaults.standard.string(forKey: "tracking") == nil {
             UserDefaults.standard.set(true, forKey: "tracking")
         }
+        
         return true
     }
 
@@ -120,6 +122,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         print("i am not available in simulator \(error)")
         
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
+    }
 
     // MARK: - Core Data stack
 
@@ -175,12 +181,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         let distance = _currentLocation?.distance(from: locations.first!)
         print(distance!)
-        if distance! > 10 {
+        if distance! >= 0.0 {
         
             let id = UserDefaults.standard.string(forKey: "userId")
             if id != nil {
                 web.notification(completion: { (response) in
-                    print(response ?? "")
+                    if response != nil {
+                        var json = response as! JSON
+                        print(json["msg"] ?? "No value")
+                        print("Core data operation")
+                        self.storeNotification(text: json["msg"] as! String? ?? "No value")
+                        self.getNotifications()
+                    } else {
+                        print("Do nothing")
+                    }
                 }, params: ["_id":id!,"location":["lat":locations.first!.coordinate.latitude, "lon":locations.first!.coordinate.longitude]])
             }
         
@@ -209,6 +223,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         
         
+    }
+    
+    func getContext () -> NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
+    
+    func storeNotification (text: String) {
+        let context = getContext()
+        
+        //retrieve the entity that we just created
+        let entity =  NSEntityDescription.entity(forEntityName: "NotificationCoreData", in: context)
+        
+        let transc = NotificationCoreData(entity: entity!, insertInto: context)
+        
+        //set the entity values
+        transc.setValue(text, forKey: "text")
+        transc.setValue(Date(), forKey: "time_stamp")
+        
+        //save the object
+        do {
+            try context.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error), \(error.userInfo)")
+        } catch {
+            
+        }
+    }
+    func getNotifications () {
+        //create a fetch request, telling it about the entity
+        let fetchRequest: NSFetchRequest<NotificationCoreData> = NotificationCoreData.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "time_stamp", ascending: false)]
+        do {
+            //go get the results
+            let searchResults = try getContext().fetch(fetchRequest)
+            
+            //I like to check the size of the returned results!
+            print ("num of results = \(searchResults.count)")
+            UIApplication.shared.applicationIconBadgeNumber = searchResults.count
+            //You need to convert to NSManagedObject to use 'for' loops
+            for notification in searchResults as [NotificationCoreData] {
+                //get the Key Value pairs (although there may be a better way to do that...
+                print(notification.text!)
+            }
+        } catch {
+            print("Error with request: \(error)")
+        }
     }
 
 }

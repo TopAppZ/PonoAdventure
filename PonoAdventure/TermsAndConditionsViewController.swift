@@ -13,7 +13,7 @@ class TermsAndConditionsViewController: UIViewController {
     @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = NSURL (string: "http://generator.lorem-ipsum.info/terms-and-conditions")
+        let url = NSURL (string: "https://s3-us-west-2.amazonaws.com/pono-adventure-s3/tnc.html")
         let requestObj = NSURLRequest(url: url! as URL);
         webView.loadRequest(requestObj as URLRequest)
         // Do any additional setup after loading the view.
