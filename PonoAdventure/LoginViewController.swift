@@ -67,7 +67,14 @@ class LoginViewController: UIViewController {
                 })
             }
             
-        }, params: ["email":email.text! , "password":password.text!, "device_id":UserDefaults.standard.string(forKey: "deviceID")!])
+        }, params: ["email":email.text! , "password":password.text!, "device_id":UserDefaults.standard.string(forKey: "deviceID") ?? "nothing"])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
     }
 
 }

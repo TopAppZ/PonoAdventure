@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import PopupDialog
+import QuartzCore
 class PlaceDetailsViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -19,6 +21,7 @@ class PlaceDetailsViewController: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var bookButton: UIView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var playBtn: UIButton!
     var place:Place?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +35,10 @@ class PlaceDetailsViewController: UIViewController {
             self.price.text = "$" + (place?.price)! + "/per person"
         } else {
             self.bookButton.isHidden = true
-        }        
+        }
+        if  place?.videoURL == "NA" {
+            playBtn.isHidden = true
+        }
         // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
@@ -70,5 +76,19 @@ class PlaceDetailsViewController: UIViewController {
             dest.place = place
         }
     }
+    
+    @IBAction func playAction(_ sender: Any) {
+        // Create a custom view controller
+        let youtubePlayerController = YoutubePlayerViewController(nibName: "YoutubePlayerView", bundle: nil)
+        youtubePlayerController.youtubeURL = place?.videoURL
+        self.definesPresentationContext = true
+        youtubePlayerController.modalPresentationStyle = .overCurrentContext
+        youtubePlayerController.modalTransitionStyle = .crossDissolve
+        self.present(youtubePlayerController, animated: true) {
+            
+        }
+        
+    }
+    
 
 }

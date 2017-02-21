@@ -94,5 +94,11 @@ class NotificationViewController: UIViewController, UITableViewDelegate, UITable
             print("Error with request: \(error)")
         }
     }
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
+    }
 
 }

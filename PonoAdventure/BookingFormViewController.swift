@@ -177,4 +177,11 @@ class BookingFormViewController: UIViewController, UIScrollViewDelegate, PayPalP
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
+    }
+    
 }

@@ -81,4 +81,10 @@ class SignUpViewController: UIViewController, UIScrollViewDelegate, ValidationDe
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor.white.cgColor
     }
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
+    }
 }

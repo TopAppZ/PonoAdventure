@@ -154,6 +154,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         isFromMap = false
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
+    }
     
 }

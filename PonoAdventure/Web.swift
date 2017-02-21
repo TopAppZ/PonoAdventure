@@ -23,7 +23,8 @@ class Web:WebInterface {
     }
     
     func getPlacesByCategory(completion: @escaping ([Place]) -> Void, category:String, loc:String) {
-        Alamofire.request(self.apiURL + "adventure/?category=" + category + "&loc="+loc).responseJSON { response in
+        Alamofire.request(self.apiURL + "adventure/?category=" + category.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)! + "&loc="+loc).responseJSON { response in
+            print(response)
             let arr = response.result.value as! [JSON]
             completion([Place].from(jsonArray: arr)!)
         }

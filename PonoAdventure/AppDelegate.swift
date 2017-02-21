@@ -52,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             self.window?.makeKeyAndVisible()
         }
         locationManager.delegate = self
-        locationManager.desiredAccuracy = 1
-        locationManager.distanceFilter = 10
+        locationManager.desiredAccuracy = 50
+        locationManager.distanceFilter = 100
         locationManager.pausesLocationUpdatesAutomatically = false
         locationManager.activityType = CLActivityType.automotiveNavigation
         locationManager.allowsBackgroundLocationUpdates = true
@@ -181,7 +181,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         let distance = _currentLocation?.distance(from: locations.first!)
         print(distance!)
-        if distance! >= 0.0 {
+        if distance! >= 100 {
         
             let id = UserDefaults.standard.string(forKey: "userId")
             if id != nil {
@@ -271,6 +271,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         } catch {
             print("Error with request: \(error)")
         }
+    }
+    
+    var orientationLock = UIInterfaceOrientationMask.all
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        return self.orientationLock
     }
 
 }

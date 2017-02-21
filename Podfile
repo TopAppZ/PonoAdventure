@@ -4,8 +4,9 @@ pod 'PayPal-iOS-SDK'
 target 'PonoAdventure' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  pod 'FSCalendar'
   # Pods for PonoAdventure
+  pod 'PopupDialog', '~> 0.5'
+  pod 'YouTubePlayer'
   pod 'Alamofire', '~> 4.0'
   pod 'Gloss', '~> 1.1'
   pod 'Kingfisher', '~> 3.0'

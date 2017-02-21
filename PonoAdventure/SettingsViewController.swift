@@ -34,6 +34,7 @@ class SettingsViewController: UIViewController {
     */
     @IBAction func trackingChangedAction(_ sender: UISwitch) {
         UserDefaults.standard.set(sender.isOn, forKey: "tracking")
+        tracking.isOn = UserDefaults.standard.bool(forKey: "tracking")
     }
 
     @IBAction func logOut(_ sender: Any) {
@@ -44,5 +45,11 @@ class SettingsViewController: UIViewController {
         if segue.identifier == "logOut" {
             UserDefaults.standard.setValue(nil, forKey: "userId")
         }
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
     }
 }
