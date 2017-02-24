@@ -42,7 +42,7 @@ class PlaceDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewDidLayoutSubviews() {
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.contentView.frame.size.height)
+        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.contentView.frame.size.height + desc.frame.size.height)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +54,7 @@ class PlaceDetailsViewController: UIViewController {
     }
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+    
     }
 
     /*
@@ -73,6 +74,10 @@ class PlaceDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBooking" {
             let dest = segue.destination as! CalenderViewController
+            dest.place = place
+        }
+        if segue.identifier == "toDirection" {
+            let dest = segue.destination as! DirectionViewController
             dest.place = place
         }
     }

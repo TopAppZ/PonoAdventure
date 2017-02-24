@@ -3,6 +3,8 @@ platform :ios, '9.0'
 pod 'PayPal-iOS-SDK'
 target 'PonoAdventure' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
   use_frameworks!
   # Pods for PonoAdventure
   pod 'PopupDialog', '~> 0.5'

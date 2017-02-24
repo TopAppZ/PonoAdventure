@@ -23,6 +23,7 @@
 		335A5C651E56640D001FAE35 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335A5C631E56640D001FAE35 /* UserNotifications.framework */; };
 		335A5C661E56640D001FAE35 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335A5C641E56640D001FAE35 /* UserNotificationsUI.framework */; };
 		335AA6621DF7153700F72AE7 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335AA6611DF7153700F72AE7 /* Place.swift */; };
+		33627DFC1E603BC600CA5D65 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33627DFB1E603BC600CA5D65 /* DirectionViewController.swift */; };
 		3369CC341DB6BBD40029C1D1 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */; };
 		3369CC361DB6CC030029C1D1 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */; };
 		33782E2C1E4CEB6200CDA7CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33782E2B1E4CEB6200CDA7CD /* SettingsViewController.swift */; };
@@ -89,6 +90,7 @@
 		335A5C631E56640D001FAE35 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		335A5C641E56640D001FAE35 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		335AA6611DF7153700F72AE7 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		33627DFB1E603BC600CA5D65 /* DirectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
 		3369CC331DB6BBD40029C1D1 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3369CC351DB6CC030029C1D1 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
 		33782E2B1E4CEB6200CDA7CD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				338241791E54B3ED002B0161 /* TermsAndConditionsViewController.swift */,
 				33944C471E56321D0048C056 /* NotificationViewController.swift */,
 				338A56631E5BB12D00CF5294 /* YoutubePlayerViewController.swift */,
+				33627DFB1E603BC600CA5D65 /* DirectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -637,6 +640,7 @@
 				33782E2C1E4CEB6200CDA7CD /* SettingsViewController.swift in Sources */,
 				335AA6621DF7153700F72AE7 /* Place.swift in Sources */,
 				33D473FE1E27EF4200BE81C2 /* SignUpViewController.swift in Sources */,
+				33627DFC1E603BC600CA5D65 /* DirectionViewController.swift in Sources */,
 				3325431D1DDF91A90009BDE9 /* WebInterface.swift in Sources */,
 				338DE7261D95393200CEC5C0 /* PonoAdventure.xcdatamodeld in Sources */,
 				33525F541DBA735500674133 /* ListViewController.swift in Sources */,

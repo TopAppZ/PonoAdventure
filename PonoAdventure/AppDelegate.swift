@@ -12,6 +12,7 @@ import CoreLocation
 import Alamofire
 import UserNotifications
 import Gloss
+import GoogleMaps
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
@@ -19,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var _currentLocation:CLLocation?
     let web = Web()
     var isFirstLocation:Bool = true
+    let googleMapsApiKey = "AIzaSyB5fhRpxYWLayfkgs1y2GzlkJFBuj5q3Xc"
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey(googleMapsApiKey)
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.0/255.0, green: 198.0/255.0, blue: 255.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
@@ -181,14 +184,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         let distance = _currentLocation?.distance(from: locations.first!)
         print(distance!)
-        if distance! >= 100 {
+        if distance! >= 100.0 {
         
             let id = UserDefaults.standard.string(forKey: "userId")
             if id != nil {
                 web.notification(completion: { (response) in
                     if response != nil {
                         var json = response as! JSON
-                        print(json["msg"] ?? "No value")
+                        print(response)
                         print("Core data operation")
                         self.storeNotification(text: json["msg"] as! String? ?? "No value")
                         self.getNotifications()

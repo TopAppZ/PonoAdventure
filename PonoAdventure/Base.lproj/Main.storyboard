@@ -226,7 +226,7 @@
                         <nil key="title"/>
                         <barButtonItem key="backBarButtonItem" title="Back" id="SU5-X5-EOy"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="pRr-mH-cAS">
-                            <rect key="frame" x="124.5" y="7" width="165" height="30"/>
+                            <rect key="frame" x="125" y="7" width="165" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="List"/>
@@ -335,23 +335,36 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-hg-s9f">
-                                                        <rect key="frame" x="157" y="127" width="100" height="100"/>
+                                                        <rect key="frame" x="157" y="127" width="80" height="80"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="NKf-TA-hJg"/>
-                                                            <constraint firstAttribute="width" constant="100" id="bTZ-Os-Sa2"/>
+                                                            <constraint firstAttribute="height" constant="80" id="NKf-TA-hJg"/>
+                                                            <constraint firstAttribute="width" constant="80" id="bTZ-Os-Sa2"/>
                                                         </constraints>
                                                         <state key="normal" image="play"/>
                                                         <connections>
                                                             <action selector="playAction:" destination="CUL-O3-G93" eventType="touchUpInside" id="nua-7b-Kzg"/>
                                                         </connections>
                                                     </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcP-u8-db9">
+                                                        <rect key="frame" x="289" y="316" width="117" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="TNK-u3-H9o"/>
+                                                            <constraint firstAttribute="width" constant="117" id="cxP-CU-qED"/>
+                                                        </constraints>
+                                                        <state key="normal" image="direction"/>
+                                                        <connections>
+                                                            <segue destination="qkK-6T-vml" kind="show" identifier="toDirection" id="xAi-AQ-B9n"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="sQx-hg-s9f" firstAttribute="centerY" secondItem="IOz-Ge-5wH" secondAttribute="centerY" id="EKD-XW-1X6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="tcP-u8-db9" secondAttribute="trailing" constant="8" id="DnH-k5-KRt"/>
+                                                    <constraint firstItem="sQx-hg-s9f" firstAttribute="centerY" secondItem="IOz-Ge-5wH" secondAttribute="centerY" constant="-10" id="EKD-XW-1X6"/>
                                                     <constraint firstItem="pRb-Vy-qbA" firstAttribute="leading" secondItem="IOz-Ge-5wH" secondAttribute="leading" id="bXJ-cn-vQ0"/>
-                                                    <constraint firstItem="sQx-hg-s9f" firstAttribute="centerX" secondItem="IOz-Ge-5wH" secondAttribute="centerX" id="cHJ-oz-g4P"/>
+                                                    <constraint firstItem="sQx-hg-s9f" firstAttribute="centerX" secondItem="IOz-Ge-5wH" secondAttribute="centerX" constant="-10" id="cHJ-oz-g4P"/>
                                                     <constraint firstItem="pRb-Vy-qbA" firstAttribute="top" secondItem="IOz-Ge-5wH" secondAttribute="top" constant="22" id="dff-JL-aao"/>
+                                                    <constraint firstItem="tcP-u8-db9" firstAttribute="bottom" secondItem="IOz-Ge-5wH" secondAttribute="bottomMargin" id="n9L-A8-3ow"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -465,6 +478,41 @@
             </objects>
             <point key="canvasLocation" x="2911.594202898551" y="146.73913043478262"/>
         </scene>
+        <!--Direction-->
+        <scene sceneID="0Ct-Ow-jWB">
+            <objects>
+                <viewController id="qkK-6T-vml" customClass="DirectionViewController" customModule="PonoAdventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Po1-at-R2K"/>
+                        <viewControllerLayoutGuide type="bottom" id="3rb-ek-Y8P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RPp-jW-M37">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-lk-J2H" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3rb-ek-Y8P" firstAttribute="top" secondItem="rUV-lk-J2H" secondAttribute="bottom" id="1oe-ty-UpS"/>
+                            <constraint firstItem="rUV-lk-J2H" firstAttribute="leading" secondItem="RPp-jW-M37" secondAttribute="leading" id="L9h-sZ-rWX"/>
+                            <constraint firstAttribute="trailing" secondItem="rUV-lk-J2H" secondAttribute="trailing" id="mSE-ey-7LQ"/>
+                            <constraint firstItem="rUV-lk-J2H" firstAttribute="top" secondItem="RPp-jW-M37" secondAttribute="top" id="mkC-Yt-WDE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Direction" id="Cfd-fm-uHW"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="gmapView" destination="rUV-lk-J2H" id="0Cy-p2-yQh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aff-4L-Ey8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3702.898550724638" y="797.28260869565224"/>
+        </scene>
         <!--Booking-->
         <scene sceneID="hPj-x8-7kY">
             <objects>
@@ -478,7 +526,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OkB-0p-Mbk" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WYh-Xx-W7e">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="WYh-Xx-W7e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -494,7 +542,8 @@
     </scenes>
     <resources>
         <image name="bg" width="360" height="640"/>
+        <image name="direction" width="117" height="30"/>
         <image name="marker" width="28" height="43"/>
-        <image name="play" width="102" height="102"/>
+        <image name="play" width="80" height="80"/>
     </resources>
 </document>
