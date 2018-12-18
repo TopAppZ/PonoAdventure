@@ -20,9 +20,10 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
     var months:[String] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     var availibility:[String] = []
     var currentYear = 2017
-    var currentMonth = 1
+    var currentMonth = 2
     var place:Place?
     var shouldPerformSegue:Bool = false
+    var selectedDate:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         availibility = (place?.schedule)!
@@ -48,6 +49,7 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         let weekday = getDayOfWeek("01/" + String(month) + "/" + String(year))
         startIndex = weekday!
         var items = [String](repeating: "", count: numDays+weekday!)
+        
         while 1 <= numDays {
             items[startIndex] = fmt.string(from: startDate!)
             //print(fmt.string(from: startDate!))
@@ -111,6 +113,8 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView =
+            collectionView.dequeueReusableSupplementaryView(ofKind: kind,withReuseIdentifier: "header", for: indexPath)
         switch kind {
             
         case UICollectionElementKindSectionHeader:
@@ -121,17 +125,27 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         default:
             assert(false, "Unexpected element kind")
         }
+        return headerView
     }
     // MARK: - UICollectionViewDelegate protocol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print(items[indexPath.item])
+        self.selectedDate = items[indexPath.item]
         let formatter  = DateFormatter()
         formatter.dateFormat = "dd/MM/yyyy"
         let date = formatter.date(from: self.items[indexPath.row])
         if(isAvailable(date: date!, dates: availibility)){
             performSegue(withIdentifier: "toBookingForm", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toBookingForm" {
+            let dest = segue.destination as! BookingFormViewController
+            dest.place = self.place
+            dest.selectedDate = self.selectedDate
         }
     }
     
@@ -165,10 +179,19 @@ class CalenderViewController: UIViewController,UICollectionViewDataSource, UICol
         formatter.timeZone = NSTimeZone(forSecondsFromGMT: 0) as TimeZone!
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         let convertedDate = formatter.string(from: date)
+        print(dates)
         if dates.contains(convertedDate) {
             print("avail")
             return true
         }
         return false
     }
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
+    }
+    
+    
 }

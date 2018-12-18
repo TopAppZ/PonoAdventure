@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+import PKHUD
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var email: CustomTextField!
+    @IBOutlet weak var password: CustomTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -45,6 +47,34 @@ class LoginViewController: UIViewController {
     
     func keyboardWillHide(_ sender: Notification) {
         self.scrollView.contentSize = CGSize(width: self.view.frame.width, height: self.view.frame.height);
+    }
+    @IBAction func actionLogin(_ sender: Any) {
+        HUD.show(.labeledProgress(title: "Wait", subtitle: "Logging in!"))
+        let w = Web()
+        w.login(completion: { (user) in
+            HUD.hide()
+            if(user != nil) {
+                UserDefaults.standard.setValue(user!.id, forKey: "userId")
+                let storyboard = UIStoryboard(name: "TabPane", bundle: nil)
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "TabPane") as! UITabBarController
+                self.navigationController?.setViewControllers([initialViewController], animated: true)
+            } else {
+                let alert = UIAlertController(title: "Login failed", message: "Please check your email or password", preferredStyle: UIAlertControllerStyle.alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(defaultAction)
+                self.present(alert, animated: true, completion: {
+                    
+                })
+            }
+            
+        }, params: ["email":email.text! , "password":password.text!, "device_id":UserDefaults.standard.string(forKey: "deviceID") ?? "nothing"])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        AppUtility.lockOrientation(.portrait)
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        AppUtility.lockOrientation(.all)
     }
 
 }
